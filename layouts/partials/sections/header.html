@@ -48,6 +48,12 @@
             <!-- navbar content -->
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav {{ .Site.Params.navbar.align | default "ms-auto"}} text-center">
+                    {{ if and (.Site.Params.arroyo.enable | default false) (not (.Site.Params.navbar.menus.disableArroyo | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#arroyo" aria-label="arroyo">Arroyo</a>
+                    </li>
+                    {{ end }}
+
                     {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">About</a>
