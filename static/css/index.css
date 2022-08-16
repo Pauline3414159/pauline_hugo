@@ -187,7 +187,42 @@ header .navbar {
     width: 100%;
 }
 
+#arroyo h3 {
+    color: var(--text-secondary-color) !important;
+}
 
+#arroyo .content {
+    font-weight: 500;
+    opacity: 0.9 !important;
+    line-height: 1.7rem !important;
+}
+
+#arroyo .image img {
+    transition: box-shadow 0.3s;
+    padding: 0;
+    border: 0;
+}
+
+#arroyo a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+#arroyo a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    bottom: 0.37em;
+    background-color: var(--primary-color);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+#arroyo a:hover::after, #about a:focus::after, #about a:active::after {
+    width: 100%;
+}
 
 /* about me */
 #about h3 {
