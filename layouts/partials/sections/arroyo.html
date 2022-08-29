@@ -1,28 +1,29 @@
 {{ if .Site.Params.arroyo.enable | default false }}
 <section id="arroyo" class="py-0 py-sm-5">
-    <div class="container bg-transparent">
+    <div class="container bg-transparent title">
         <div class="d-flex justify-content-center">
             <h3 class="align-self-center">{{ .Site.Params.arroyo.title }}</h3>
             {{ if .Site.Params.arroyo.image }}
             <img id="arroyo-logo" src="{{ .Site.Params.arroyo.image }}" class="bg-transparent img-fluid p-2" alt="">
             {{ end }}
         </div>
-        <div class="bg-transparent row justify-content-center px-3 py-5">
-            <div class="col-sm-12 col-md-12 col-lg-8 content">
+        <div class="bg-transparent row justify-content-center px-3 py-3">
+            <div class="col-sm-12 col-md-12 col-lg-8 page-content">
                 {{ .Site.Params.arroyo.content | markdownify }}
             </div>
         </div>
-        <div class="bg-transparent row justify-content-center px-3">
-            <img src="{{ .Site.Params.arroyo.architecture }}" class="img-thumbnail mx-auto w-50" alt="">
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-4">
-            <div class="row justify-content-center">
-                {{ if .Site.Params.arroyo.button.enable }}
-                <a href="{{ .Site.Params.arroyo.button.url }}" class="btn">
-                    {{ .Site.Params.arroyo.button.name }}
-                </a>
-                {{ end }}
+        <div class="bg-transparent row justify-content-center px-3 py-3">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <img src="{{ .Site.Params.arroyo.architecture }}" class="image img-fluid mx-auto" alt="">
             </div>
+            
+        </div>
+        <div class="bg-transparent row justify-content-center px-3 py-3">
+            {{ if .Site.Params.arroyo.button.enable }}
+            <a href="{{ .Site.Params.arroyo.button.url }}" class="btn w-25 mx-auto">
+                {{ .Site.Params.arroyo.button.name }}
+            </a>
+            {{ end }}
         </div>
     </div>
 </section>
