@@ -203,6 +203,25 @@ header .navbar {
     border: 0;
 }
 
+#arroyo a.btn {
+    margin-top: 50px;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color) !important;
+    border-radius: .75rem;
+    transition: none;
+}
+
+#arroyo a.btn:focus {
+    box-shadow: none;
+}
+
+#arroyo a.btn:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    opacity: 0.9;
+}
+
 #arroyo a {
     display: inline-block;
     text-decoration: none;

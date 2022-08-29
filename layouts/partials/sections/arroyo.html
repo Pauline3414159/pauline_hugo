@@ -16,14 +16,13 @@
             </div> -->
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ .Site.Params.arroyo.content | markdownify }}
-
-                {{ if .Site.Params.arroyo.skills.enable }}
-                {{ .Site.Params.arroyo.skills.title }}
-                <ul>
-                    {{ range .Site.Params.arroyo.skills.items }}
-                    <li>{{ . | markdownify }}</li>
-                    {{ end }}
-                </ul>
+                
+            </div>
+            <div class="text-center">
+                {{ if .Site.Params.arroyo.button.enable }}
+                    <a href="{{ .Site.Params.arroyo.button.url }}" class="btn">
+                        {{ .Site.Params.arroyo.button.name }}
+                    </a>
                 {{ end }}
             </div>
         </div>
