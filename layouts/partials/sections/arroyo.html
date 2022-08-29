@@ -1,15 +1,19 @@
 {{ if .Site.Params.arroyo.enable | default false }}
 <section id="arroyo" class="py-0 py-sm-5">
     <div class="container bg-transparent">
-        <h3 class="text-center bg-transparent">{{ .Site.Params.arroyo.title }}</h3>
-        <div class="bg-transparent row justify-content-center px-3 py-5">
+        <div class="d-flex justify-content-center">
+            <h3 class="align-self-center">{{ .Site.Params.arroyo.title }}</h3>
             {{ if .Site.Params.arroyo.image }}
-            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
-                <div class="image d-flex px-5">
-                    <img src="{{ .Site.Params.arroyo.image }}" class="mx-auto bg-transparent" alt="">
-                </div>
-            </div>
+            <img id="arroyo-logo" src="{{ .Site.Params.arroyo.image }}" class="bg-transparent img-fluid p-2" alt="">
             {{ end }}
+        </div>
+       
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            <!-- <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
+                <div class="image d-flex px-5">
+                    
+                </div>
+            </div> -->
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ .Site.Params.arroyo.content | markdownify }}
 
